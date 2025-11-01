@@ -3,6 +3,7 @@ module ReplAlliance
   ) where
 
 import qualified PinnedWarnings
+import qualified AutoExport
 import qualified AutoExtract
 import qualified AutoSplit
 import qualified AutoImport
@@ -15,4 +16,5 @@ plugin = foldPlugins
   , AutoSplit.plugin
   , AutoImport.plugin
   , AutoExtract.plugin
+  , AutoExport.plugin
   ]

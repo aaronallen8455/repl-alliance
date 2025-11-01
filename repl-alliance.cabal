@@ -18,14 +18,27 @@ common warnings
 library
     import:           warnings
     exposed-modules:  ReplAlliance
+                      ShowWarnings
+                      AutoSplit.Pattern
     -- other-modules:
     -- other-extensions:
     build-depends:    base,
-                      ghc,
+                      ghc >= 9.6 && < 9.13,
                       pinned-warnings,
                       auto-extract,
+                      auto-export,
                       auto-split,
                       auto-import,
                       monoidal-plugins
     hs-source-dirs:   src
     default-language: GHC2021
+
+-- executable play
+--   import:           warnings
+--   build-depends:
+--     repl-alliance,
+--     base
+--   hs-source-dirs: play
+--   default-language: GHC2021
+--   ghc-options: -fplugin ReplAlliance
+--   main-is: Main.hs
