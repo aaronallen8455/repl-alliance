@@ -2,7 +2,7 @@ cabal-version:      3.0
 name:               repl-alliance
 version:            0.1.0.0
 synopsis:           Currated set of plugins for REPL based development
-description:        Currated set of plugins for REPL based development
+description:        Currated set of plugins for REPL based development providing some IDE-like functionality
 license:            BSD-3-Clause
 license-file:       LICENSE
 author:             Aaron Allen
@@ -11,6 +11,10 @@ category:           Development
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md
                     README.md
+
+source-repository head
+  type: git
+  location: https://github.com/aaronallen8455/repl-alliance
 
 common warnings
     ghc-options: -Wall
@@ -32,13 +36,3 @@ library
                       monoidal-plugins
     hs-source-dirs:   src
     default-language: GHC2021
-
--- executable play
---   import:           warnings
---   build-depends:
---     repl-alliance,
---     base
---   hs-source-dirs: play
---   default-language: GHC2021
---   ghc-options: -fplugin ReplAlliance
---   main-is: Main.hs
