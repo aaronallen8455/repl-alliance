@@ -16,3 +16,9 @@ workflows by providing IDE-like functionality, with little to no overhead.
   - Extract a segment of code as a top level function declaration
 - [auto-export](https://github.com/aaronallen8455/auto-export)
   - Add a declaration to the module export list
+- [ghci-quickfix](https://github.com/aaronallen8455/ghci-quickfix)
+  - Generate a file containing diagnostics produced during compilation for use
+    with `vim`'s quickfix system
+  - This plugin is disabled by default, you must enable it by passing
+    `-fplugin-opt ReplAlliance:--quickfix` or alternatively set the environment
+    variable `GHCI_QUICKFIX_ENABLED=true`.

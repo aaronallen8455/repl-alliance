@@ -8,6 +8,7 @@ import qualified AutoExtract
 import qualified AutoSplit
 import qualified AutoImport
 import           GHC.Plugins
+import qualified GhciQuickfix
 import           MonoidalPlugins
 
 plugin :: Plugin
@@ -17,4 +18,5 @@ plugin = foldPlugins
   , AutoImport.plugin
   , AutoExtract.plugin
   , AutoExport.plugin
+  , GhciQuickfix.pluginOffByDefault
   ]

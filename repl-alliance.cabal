@@ -33,6 +33,7 @@ library
                       auto-export,
                       auto-split,
                       auto-import,
-                      monoidal-plugins
+                      monoidal-plugins,
+                      ghci-quickfix
     hs-source-dirs:   src
     default-language: GHC2021
